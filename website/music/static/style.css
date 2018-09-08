@@ -1,0 +1,9 @@
+body {
+	background: white url("images/bg7.jpg");
+}
+.navbar{
+	border-radius:0;
+}
+.navbar-brand{
+	font:'Satisfy','cursive';
+}	

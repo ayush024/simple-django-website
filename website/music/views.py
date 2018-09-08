@@ -23,7 +23,10 @@ def favourite(request, album_id):
 		return render(request, 'music/details.html', {'albums':album,
 		'error_message': "You selected an invalid song"} )
 	else:
-		selected_song.is_favourite=True
+		if selected_song.is_favourite==False:
+			selected_song.is_favourite=True
+		else:
+			selected_song.is_favourite=False
 		selected_song.save()
 		return render(request, 'music/details.html', {'albums':album})
 		
